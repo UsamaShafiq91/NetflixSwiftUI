@@ -27,6 +27,9 @@ struct Movie: Identifiable {
     
     var promotionHeadline: String?
     
+    var moreLikeThis: [Movie]
+    var trailers: [Trailer]
+
     var numberOfSeasonsDisplay: String {
         var display = ""
         

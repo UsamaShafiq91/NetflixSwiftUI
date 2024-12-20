@@ -13,7 +13,7 @@ struct CustomVideoPlayer: View {
     let videoUrl: URL
     
     var body: some View {
-        CustomVideoPlayer(videoUrl: videoUrl)
+        VideoPlayer(player: AVPlayer(url: videoUrl))
     }
 }
 

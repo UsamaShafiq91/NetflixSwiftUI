@@ -96,7 +96,8 @@ struct MovieDetailView: View {
                         }
                         .padding()
                         
-                        CustomTabSwitcher(tabs: [.episode, .trailers, .more])
+                        CustomTabSwitcher(tabs: [.episode, .trailers, .more], 
+                                          movie: movie)
                     }
                     .padding()
 
@@ -108,5 +109,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(movie: exampleMovie4)
+    MovieDetailView(movie: exampleMovie1)
 }

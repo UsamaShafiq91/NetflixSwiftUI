@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct TrailersView: View {
+    
+    let trailers: [Trailer]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ForEach(trailers) { trailer in
+                VStack(alignment: .leading) {
+                    VideoPreview(trailer: trailer)
+                    
+                    Text(trailer.name)
+                        .font(.headline)
+                }
+                .foregroundStyle(.white)
+            }
+        }
     }
 }
 
 #Preview {
-    TrailersView()
+    TrailersView(trailers: exampleTrailers)
 }

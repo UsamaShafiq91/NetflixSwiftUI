@@ -17,6 +17,7 @@ enum Tab: String {
 struct CustomTabSwitcher: View {
     
     var tabs: [Tab]
+    let movie: Movie
     
     @State private var selectedTab = Tab.episode
     
@@ -26,10 +27,6 @@ struct CustomTabSwitcher: View {
                 HStack(spacing: 20) {
                     ForEach(tabs, id: \.self) { tab in
                         VStack {
-                            Rectangle()
-                                .frame(height: 6)
-                                .foregroundStyle(tab == selectedTab ? Color.red : Color.clear)
-                            
                             Button(action: {
                                 withAnimation {
                                     selectedTab = tab
@@ -38,10 +35,28 @@ struct CustomTabSwitcher: View {
                                 Text(tab.rawValue)
                                     .fontWeight(.bold)
                                     .foregroundStyle(tab == selectedTab ? Color.white : Color.gray)
+                                    .padding(.vertical, 10)
+                            })
+                            .overlay(alignment: .top, content: {
+                                Rectangle()
+                                    .frame(height: 6)
+                                    .foregroundStyle(tab == selectedTab ? Color.red : Color.clear)
                             })
                         }
                     }
                 }
+                
+            }
+            .scrollIndicators(.hidden)
+            
+            
+            switch selectedTab {
+            case .episode:
+                Text("Episodes")
+            case .trailers:
+                TrailersView(trailers: movie.trailers)
+            case .more:
+                MoreLikeThisView(movies: movie.moreLikeThis)
             }
         }
         .foregroundStyle(.white)
@@ -52,6 +67,7 @@ struct CustomTabSwitcher: View {
     ZStack {
         Color.black
             .ignoresSafeArea()
-        CustomTabSwitcher(tabs: [.episode, .trailers, .more])
+        CustomTabSwitcher(tabs: [.episode, .trailers, .more],
+                          movie: exampleMovie1)
     }
 }
