@@ -24,6 +24,8 @@
 		F11E42C32D157FB900E2B3B5 /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E42C22D157FB900E2B3B5 /* VideoPreview.swift */; };
 		F11E42C52D15812000E2B3B5 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E42C42D15812000E2B3B5 /* CustomVideoPlayer.swift */; };
 		F11E42C72D15826200E2B3B5 /* TrailersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E42C62D15826200E2B3B5 /* TrailersView.swift */; };
+		F11E42C92D15969C00E2B3B5 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E42C82D15969C00E2B3B5 /* EpisodeView.swift */; };
+		F11E42CB2D159E6F00E2B3B5 /* SeasonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E42CA2D159E6F00E2B3B5 /* SeasonPickerView.swift */; };
 		F16CC1022D114FA9006F16CE /* HorizontalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC1012D114FA9006F16CE /* HorizontalButton.swift */; };
 		F16CC10A2D115E8B006F16CE /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC1092D115E8B006F16CE /* MovieDetailView.swift */; };
 		F16CC10C2D116407006F16CE /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC10B2D116407006F16CE /* Episode.swift */; };
@@ -49,6 +51,8 @@
 		F11E42C22D157FB900E2B3B5 /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
 		F11E42C42D15812000E2B3B5 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		F11E42C62D15826200E2B3B5 /* TrailersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailersView.swift; sourceTree = "<group>"; };
+		F11E42C82D15969C00E2B3B5 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		F11E42CA2D159E6F00E2B3B5 /* SeasonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerView.swift; sourceTree = "<group>"; };
 		F16CC1012D114FA9006F16CE /* HorizontalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalButton.swift; sourceTree = "<group>"; };
 		F16CC1092D115E8B006F16CE /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		F16CC10B2D116407006F16CE /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				F11E42C62D15826200E2B3B5 /* TrailersView.swift */,
 				F11E42C22D157FB900E2B3B5 /* VideoPreview.swift */,
 				F11E42C42D15812000E2B3B5 /* CustomVideoPlayer.swift */,
+				F11E42C82D15969C00E2B3B5 /* EpisodeView.swift */,
+				F11E42CA2D159E6F00E2B3B5 /* SeasonPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				F16CC10C2D116407006F16CE /* Episode.swift in Sources */,
 				F11A21562D10010E00420F70 /* MockData.swift in Sources */,
 				F11A21582D10034600420F70 /* HomeViewModel.swift in Sources */,
+				F11E42C92D15969C00E2B3B5 /* EpisodeView.swift in Sources */,
 				F11E42BD2D15463A00E2B3B5 /* MoreLikeThisView.swift in Sources */,
 				F11E42C72D15826200E2B3B5 /* TrailersView.swift in Sources */,
 				F16CC10E2D11664F006F16CE /* MovieInfoSubheadline.swift in Sources */,
@@ -265,6 +272,7 @@
 				F11A215A2D1009C600420F70 /* TopMoviePreview.swift in Sources */,
 				F16CC1122D118DE9006F16CE /* CustomTabSwitcher.swift in Sources */,
 				F11A21522D0FFFD100420F70 /* Movie.swift in Sources */,
+				F11E42CB2D159E6F00E2B3B5 /* SeasonPickerView.swift in Sources */,
 				F11E42BF2D1577CF00E2B3B5 /* Trailer.swift in Sources */,
 				F11A213F2D0FFC9200420F70 /* NetflixSwiftUIApp.swift in Sources */,
 				F11A215C2D100E1B00420F70 /* VerticalButton.swift in Sources */,

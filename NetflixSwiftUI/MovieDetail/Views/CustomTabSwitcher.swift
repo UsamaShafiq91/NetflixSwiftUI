@@ -19,6 +19,9 @@ struct CustomTabSwitcher: View {
     var tabs: [Tab]
     let movie: Movie
     
+    @Binding var showSeasonPicker: Bool
+    @Binding var selectedSeason: Int
+    
     @State private var selectedTab = Tab.episode
     
     var body: some View {
@@ -52,7 +55,9 @@ struct CustomTabSwitcher: View {
             
             switch selectedTab {
             case .episode:
-                Text("Episodes")
+                EpisodeView(episodes: movie.episodes ?? [],
+                            showSeasonPicker: $showSeasonPicker,
+                            selectedSeason: $selectedSeason)
             case .trailers:
                 TrailersView(trailers: movie.trailers)
             case .more:
@@ -68,6 +73,8 @@ struct CustomTabSwitcher: View {
         Color.black
             .ignoresSafeArea()
         CustomTabSwitcher(tabs: [.episode, .trailers, .more],
-                          movie: exampleMovie1)
+                          movie: exampleMovie1,
+                          showSeasonPicker: .constant(false),
+                          selectedSeason: .constant(1))
     }
 }

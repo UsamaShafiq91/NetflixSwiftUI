@@ -29,17 +29,56 @@ let trailer3 = Trailer(name: "Avengers trailer",
 
 let exampleTrailers = [trailer1, trailer2, trailer3]
 
+let episode1 = Episode(name: "Beginning and Ending",
+                       season: 1,
+                       episodeNumber: 1, 
+                       thumbnailImageUrl: "https://picsum.photos/300/102",
+                       description: "Six months later after the disappearance",
+                       length: 53,
+                       videoUrl: exampleVideoURL)
+let episode2 = Episode(name: "Dark matter",
+                       season: 1,
+                       episodeNumber: 2,
+                       thumbnailImageUrl: "https://picsum.photos/300/103",
+                       description: "Six months later after the disappearance",
+                       length: 54,
+                       videoUrl: exampleVideoURL)
+let episode3 = Episode(name: "Ghosts",
+                       season: 1,
+                       episodeNumber: 3,
+                       thumbnailImageUrl: "https://picsum.photos/300/104",
+                       description: "Six months later after the disappearance",
+                       length: 56,
+                       videoUrl: exampleVideoURL)
+let episode4 = Episode(name: "season 2-1",
+                       season: 2,
+                       episodeNumber: 1,
+                       thumbnailImageUrl: "https://picsum.photos/300/105",
+                       description: "Six months later after the disappearance",
+                       length: 34,
+                       videoUrl: exampleVideoURL)
+let episode5 = Episode(name: "season 2-2",
+                       season: 2,
+                       episodeNumber: 2,
+                       thumbnailImageUrl: "https://picsum.photos/300/106",
+                       description: "Six months later after the disappearance",
+                       length: 43,
+                       videoUrl: exampleVideoURL)
+
+let exampleEpisodes = [episode1, episode2, episode3, episode4, episode5]
+
 let exampleMovie1 = Movie(id: UUID().uuidString, 
                           name: "Dark",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
                           categories: ["Dystopian", "Exciting", "Suspense", "Sci-Fi"],
                           year: 2020,
                           rating: "TV-MA",
-                          numberOfSeasons: 1,
+                          numberOfSeasons: 3,
                           defaultEpisodeInfo: exampleEpisodeInfo,
                           creators: "James Cameron",
                           cast: "Hoffman, Oliver, Jordis", 
-                          moreLikeThis: [exampleMovie2, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6], 
+                          episodes: exampleEpisodes,
+                          moreLikeThis: [exampleMovie2, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6],
                           trailers: exampleTrailers)
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travellers",

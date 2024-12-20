@@ -10,13 +10,14 @@ import Kingfisher
 
 struct VideoPreview: View {
     
-    let trailer: Trailer
+    let imageUrl: URL
+    let videoUrl: URL
     
     @State private var showVideoPlayer = false
     
     var body: some View {
         ZStack {
-            KFImage(trailer.thumbnailUrl)
+            KFImage(imageUrl)
                 .resizable()
                 .scaledToFill()
             
@@ -29,11 +30,12 @@ struct VideoPreview: View {
             })
         }
         .sheet(isPresented: $showVideoPlayer, content: {
-            CustomVideoPlayer(videoUrl: trailer.videoUrl)
+            CustomVideoPlayer(videoUrl: videoUrl)
         })
     }
 }
 
 #Preview {
-    VideoPreview(trailer: trailer1)
+    VideoPreview(imageUrl: exampleImageUrl,
+                 videoUrl: exampleVideoURL)
 }
