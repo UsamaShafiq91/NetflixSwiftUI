@@ -23,7 +23,7 @@ struct CustomTabSwitcher: View {
     var body: some View {
         VStack {
             ScrollView(.horizontal) {
-                HStack {
+                HStack(spacing: 20) {
                     ForEach(tabs, id: \.self) { tab in
                         VStack {
                             Rectangle()
