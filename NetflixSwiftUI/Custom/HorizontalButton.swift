@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct WhiteButton: View {
+struct HorizontalButton: View {
     
     let imageName: String
     let text: String
+    var background: Color = .white
     
     var action: () -> Void
     
@@ -28,13 +29,13 @@ struct WhiteButton: View {
                 Spacer()
             }
             .padding(.vertical, 4)
-            .foregroundStyle(.black)
-            .background(.white)
+            .foregroundStyle(background == .white ? .black : .white)
+            .background(background)
             .clipShape(.rect(cornerRadius: 4))
         })
     }
 }
 
 #Preview {
-    WhiteButton(imageName: "play.fill", text: "Play", action: {})
+    HorizontalButton(imageName: "play.fill", text: "Play", action: {})
 }

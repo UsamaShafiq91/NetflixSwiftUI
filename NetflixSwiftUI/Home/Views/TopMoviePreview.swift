@@ -50,7 +50,7 @@ struct TopMoviePreview: View {
                     })
                     
                     Spacer()
-                    WhiteButton(imageName: "play.fill",
+                    HorizontalButton(imageName: "play.fill",
                                 text: "Play",
                                 action: {
                         
