@@ -31,6 +31,8 @@
 		F16CC10C2D116407006F16CE /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC10B2D116407006F16CE /* Episode.swift */; };
 		F16CC10E2D11664F006F16CE /* MovieInfoSubheadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC10D2D11664F006F16CE /* MovieInfoSubheadline.swift */; };
 		F16CC1122D118DE9006F16CE /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC1112D118DE9006F16CE /* CustomTabSwitcher.swift */; };
+		F1D5B18C2D1A9C7C006D6CFA /* TopRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B18B2D1A9C7C006D6CFA /* TopRowView.swift */; };
+		F1D5B18E2D1AAD39006D6CFA /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B18D2D1AAD39006D6CFA /* HomeContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		F16CC10B2D116407006F16CE /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		F16CC10D2D11664F006F16CE /* MovieInfoSubheadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoSubheadline.swift; sourceTree = "<group>"; };
 		F16CC1112D118DE9006F16CE /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
+		F1D5B18B2D1A9C7C006D6CFA /* TopRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowView.swift; sourceTree = "<group>"; };
+		F1D5B18D2D1AAD39006D6CFA /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				F11A214F2D0FFFC900420F70 /* HomeView.swift */,
+				F1D5B18D2D1AAD39006D6CFA /* HomeContentView.swift */,
+				F1D5B18B2D1A9C7C006D6CFA /* TopRowView.swift */,
 				F11A21532D10010500420F70 /* HomeMovieCellView.swift */,
 				F11A21592D1009C600420F70 /* TopMoviePreview.swift */,
 			);
@@ -260,6 +266,7 @@
 			files = (
 				F11A21502D0FFFC900420F70 /* HomeView.swift in Sources */,
 				F16CC10C2D116407006F16CE /* Episode.swift in Sources */,
+				F1D5B18E2D1AAD39006D6CFA /* HomeContentView.swift in Sources */,
 				F11A21562D10010E00420F70 /* MockData.swift in Sources */,
 				F11A21582D10034600420F70 /* HomeViewModel.swift in Sources */,
 				F11E42C92D15969C00E2B3B5 /* EpisodeView.swift in Sources */,
@@ -275,6 +282,7 @@
 				F11E42CB2D159E6F00E2B3B5 /* SeasonPickerView.swift in Sources */,
 				F11E42BF2D1577CF00E2B3B5 /* Trailer.swift in Sources */,
 				F11A213F2D0FFC9200420F70 /* NetflixSwiftUIApp.swift in Sources */,
+				F1D5B18C2D1A9C7C006D6CFA /* TopRowView.swift in Sources */,
 				F11A215C2D100E1B00420F70 /* VerticalButton.swift in Sources */,
 				F11E42C32D157FB900E2B3B5 /* VideoPreview.swift in Sources */,
 				F16CC10A2D115E8B006F16CE /* MovieDetailView.swift in Sources */,

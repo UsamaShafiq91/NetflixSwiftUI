@@ -15,6 +15,8 @@ class HomeViewModel: ObservableObject {
         movies.keys.map({String($0)})
     }
     
+    var genres: [HomeGenre] = [.allGenres, .action, .comedy]
+    
     init() {
         setupMovies()
     }
@@ -27,7 +29,19 @@ class HomeViewModel: ObservableObject {
         movies["Sci Fi"] = exampleMovies.shuffled()
     }
     
-    func getCategoryMovies(category: String) -> [Movie] {
-        return movies[category] ?? []
+    func getCategoryMovies(category: String, 
+                           selectedTopRow: HomeTopRow,
+                           selectedGenre: HomeGenre) -> [Movie] {
+        switch selectedTopRow {
+        case .home:
+            return movies[category] ?? []
+        case .tvShows:
+            return (movies[category] ?? []).filter({$0.movieType == .tvShow && $0.genre == selectedGenre})
+        case .movies:
+            return (movies[category] ?? []).filter({$0.movieType == .movie && $0.genre == selectedGenre})
+        default:
+            return movies[category] ?? []
+        }
+        
     }
 }

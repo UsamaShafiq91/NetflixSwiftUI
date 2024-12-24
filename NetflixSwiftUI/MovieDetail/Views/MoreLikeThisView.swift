@@ -17,11 +17,9 @@ struct MoreLikeThisView: View {
     ]
     
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVGrid(columns: columns) {
-                ForEach(movies, id:\.id) { movie in
-                    HomeMovieCellView(movie: movie)
-                }
+        LazyVGrid(columns: columns) {
+            ForEach(movies, id:\.id) { movie in
+                HomeMovieCellView(movie: movie)
             }
         }
     }
