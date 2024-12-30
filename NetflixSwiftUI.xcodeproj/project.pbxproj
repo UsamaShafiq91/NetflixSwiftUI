@@ -40,6 +40,7 @@
 		F1ABCF412D22744900B56D84 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABCF402D22744900B56D84 /* ComingSoonView.swift */; };
 		F1ABCF432D2276A100B56D84 /* ComingSoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABCF422D2276A100B56D84 /* ComingSoonCell.swift */; };
 		F1ABCF462D227C0800B56D84 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABCF452D227C0800B56D84 /* ComingSoonViewModel.swift */; };
+		F1ABCF4A2D22818D00B56D84 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABCF492D22818D00B56D84 /* DownloadView.swift */; };
 		F1D5B18C2D1A9C7C006D6CFA /* TopRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B18B2D1A9C7C006D6CFA /* TopRowView.swift */; };
 		F1D5B18E2D1AAD39006D6CFA /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B18D2D1AAD39006D6CFA /* HomeContentView.swift */; };
 		F1D5B1922D1ACC0A006D6CFA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B1912D1ACC0A006D6CFA /* SearchBar.swift */; };
@@ -81,6 +82,7 @@
 		F1ABCF402D22744900B56D84 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
 		F1ABCF422D2276A100B56D84 /* ComingSoonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonCell.swift; sourceTree = "<group>"; };
 		F1ABCF452D227C0800B56D84 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
+		F1ABCF492D22818D00B56D84 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		F1D5B18B2D1A9C7C006D6CFA /* TopRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowView.swift; sourceTree = "<group>"; };
 		F1D5B18D2D1AAD39006D6CFA /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		F1D5B1912D1ACC0A006D6CFA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				F11A213E2D0FFC9200420F70 /* NetflixSwiftUIApp.swift */,
 				F11A21402D0FFC9200420F70 /* ContentView.swift */,
+				F1ABCF472D22817A00B56D84 /* Download */,
 				F1ABCF3C2D22740B00B56D84 /* ComingSoon */,
 				F1D5B1932D1AD749006D6CFA /* Extensions */,
 				F1D5B18F2D1ACBF7006D6CFA /* Search */,
@@ -225,6 +228,22 @@
 				F1ABCF452D227C0800B56D84 /* ComingSoonViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F1ABCF472D22817A00B56D84 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABCF482D22818200B56D84 /* Views */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		F1ABCF482D22818200B56D84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABCF492D22818D00B56D84 /* DownloadView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F1D5B18F2D1ACBF7006D6CFA /* Search */ = {
@@ -356,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1ABCF4A2D22818D00B56D84 /* DownloadView.swift in Sources */,
 				F11A21502D0FFFC900420F70 /* HomeView.swift in Sources */,
 				F1ABCF432D2276A100B56D84 /* ComingSoonCell.swift in Sources */,
 				F16CC10C2D116407006F16CE /* Episode.swift in Sources */,

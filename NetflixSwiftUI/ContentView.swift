@@ -12,6 +12,7 @@ struct ContentView: View {
     init() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().backgroundColor = .black
     }
     
     var body: some View {
@@ -26,12 +27,12 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            Text("Coming Soon")
+            ComingSoonView()
                 .tabItem {
                     Label("Coming Soon", systemImage: "play.rectangle")
                 }
             
-            Text("Download")
+            DownloadView()
                 .tabItem {
                     Label("Download", systemImage: "arrow.down.to.line")
                 }

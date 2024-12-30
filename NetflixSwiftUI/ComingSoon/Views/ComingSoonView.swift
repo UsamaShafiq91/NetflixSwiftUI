@@ -28,9 +28,6 @@ struct ComingSoonView: View {
                             ComingSoonCell(movie: movie, movieDetailToShow: $movieDetailToShow)
                         }
                     }
-                    .navigationDestination(isPresented: $showNotificationList, destination: {
-                        Text("Notifications View")
-                    })
                 }
                 .padding()
                 
@@ -41,7 +38,13 @@ struct ComingSoonView: View {
                     })
                 }
             }
+            .navigationDestination(isPresented: $showNotificationList, destination: {
+                Text("Notifications View")
+            })
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationBarBackButtonHidden()
         }
+        .background(.black)
     }
 }
 
