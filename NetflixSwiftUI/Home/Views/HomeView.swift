@@ -52,6 +52,7 @@ struct HomeView: View {
                                         
                     HomeContentView(homeViewModel: homeViewModel,
                                     selectedTopRow: selectedTopRow,
+                                    selectedGenre: selectedGenre,
                                     movieDetailToShow: $movieDetailToShow)
                 }
                 .foregroundStyle(.white)

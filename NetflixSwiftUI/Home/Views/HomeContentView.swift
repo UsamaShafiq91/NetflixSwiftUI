@@ -11,6 +11,7 @@ struct HomeContentView: View {
     
     let homeViewModel: HomeViewModel
     let selectedTopRow: HomeTopRow
+    let selectedGenre: HomeGenre
     
     @Binding var movieDetailToShow: Movie?
 
@@ -27,7 +28,8 @@ struct HomeContentView: View {
                 ScrollView(.horizontal) {
                     LazyHStack {
                         ForEach(homeViewModel.getCategoryMovies(category: category, 
-                                                                selectedTopRow: selectedTopRow)) { movie in
+                                                                selectedTopRow: selectedTopRow,
+                                                                selectedGenre: selectedGenre)) { movie in
                             HomeMovieCellView(movie: movie)
                                 .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 200)
                                 .padding(.horizontal, 20)
@@ -44,6 +46,7 @@ struct HomeContentView: View {
 
 #Preview {
     HomeContentView(homeViewModel: HomeViewModel(),
-                    selectedTopRow: .home,
+                    selectedTopRow: .home, 
+                    selectedGenre: .allGenres,
                     movieDetailToShow: .constant(nil))
 }
