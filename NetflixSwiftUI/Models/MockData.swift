@@ -79,7 +79,10 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           cast: "Hoffman, Oliver, Jordis", 
                           episodes: exampleEpisodes,
                           moreLikeThis: [exampleMovie2, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers, 
+                          previewImageName: "ozark-preview",
+                          previewVideoUrl: exampleVideoURL,
+                          accentColor: .blue)
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travellers",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/301")!,
@@ -91,7 +94,10 @@ let exampleMovie2 = Movie(id: UUID().uuidString,
                           creators: "James Cameron",
                           cast: "Hoffman, Oliver, Jordis",
                           moreLikeThis: [],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers,
+                          previewImageName: "ozark-preview",
+                          previewVideoUrl: exampleVideoURL,
+                          accentColor: .red)
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/302")!,
@@ -103,7 +109,10 @@ let exampleMovie3 = Movie(id: UUID().uuidString,
                           creators: "James Cameron",
                           cast: "Hoffman, Oliver, Jordis",
                           moreLikeThis: [],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers,
+                          previewImageName: "dark-preview",
+                          previewVideoUrl: exampleVideoURL,
+                          accentColor: .green)
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Alone",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/303")!,
@@ -116,7 +125,9 @@ let exampleMovie4 = Movie(id: UUID().uuidString,
                           cast: "Hoffman, Oliver, Jordis",
                           promotionHeadline: "Watch upcoming episodes",
                           moreLikeThis: [],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers,
+                          previewImageName: "dark-preview",
+                          previewVideoUrl: exampleVideoURL)
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Hannibal",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/304")!,
@@ -128,7 +139,9 @@ let exampleMovie5 = Movie(id: UUID().uuidString,
                           creators: "James Cameron",
                           cast: "Hoffman, Oliver, Jordis",
                           moreLikeThis: [],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers,
+                          previewImageName: "travelers-preview",
+                          previewVideoUrl: exampleVideoURL)
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "After Life",
                           thumbnailUrl: URL(string: "https://picsum.photos/200/305")!,
@@ -141,7 +154,9 @@ let exampleMovie6 = Movie(id: UUID().uuidString,
                           cast: "Hoffman, Oliver, Jordis", 
                           promotionHeadline: "Watch Season 6 Now",
                           moreLikeThis: [],
-                          trailers: exampleTrailers)
+                          trailers: exampleTrailers,
+                          previewImageName: "travelers-preview",
+                          previewVideoUrl: exampleVideoURL)
 
 let exampleMovies = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
 

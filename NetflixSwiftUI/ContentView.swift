@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var currentIndex: Int = 0
+    @State private var isVisible: Bool = false
+    
     init() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = .black
@@ -16,33 +19,39 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
+        ZStack {
+            TabView {
+                HomeView(currentIndex: $currentIndex,
+                         isVisible: $isVisible)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                SearchView()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                
+                ComingSoonView()
+                    .tabItem {
+                        Label("Coming Soon", systemImage: "play.rectangle")
+                    }
+                
+                DownloadView()
+                    .tabItem {
+                        Label("Download", systemImage: "arrow.down.to.line")
+                    }
+            }
+            .accentColor(.white)
             
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-            
-            ComingSoonView()
-                .tabItem {
-                    Label("Coming Soon", systemImage: "play.rectangle")
-                }
-            
-            DownloadView()
-                .tabItem {
-                    Label("Download", systemImage: "arrow.down.to.line")
-                }
-            
-            Text("More")
-                .tabItem {
-                    Label("More", systemImage: "ellipsis")
-                }
+            if isVisible {
+                PreviewListView(movies: exampleMovies,
+                                currentIndex: $currentIndex,
+                                isVisible: $isVisible)
+                .transition(.move(edge: .bottom))
+            }
         }
-        .accentColor(.white)
+        .animation(.easeInOut, value: isVisible)
     }
 }
 

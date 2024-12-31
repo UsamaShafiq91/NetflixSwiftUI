@@ -33,6 +33,9 @@ struct HomeView: View {
     @State private var showTopRowPicker: Bool = false
     @State private var showGenrePicker: Bool = false
     
+    @Binding var currentIndex: Int
+    @Binding var isVisible: Bool
+    
     var body: some View {
         ZStack {
             Color.black
@@ -49,7 +52,13 @@ struct HomeView: View {
                         .frame(width: UIScreen.main.bounds.width)
                         .padding(.top, -100)
                         .zIndex(-1)
-                                        
+                                    
+                    
+                    MoviePreviewRow(movies: exampleMovies,
+                                    currentIndex: $currentIndex,
+                                    isVisible: $isVisible)
+                        .frame(height: 185)
+                    
                     HomeContentView(homeViewModel: homeViewModel,
                                     selectedTopRow: selectedTopRow,
                                     selectedGenre: selectedGenre,
@@ -143,5 +152,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(currentIndex: .constant(0),
+             isVisible: .constant(false))
 }

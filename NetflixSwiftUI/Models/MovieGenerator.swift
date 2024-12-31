@@ -46,6 +46,13 @@ func generateMovies(count: Int) -> [Movie] {
         let allTrailers = generateTrailers(3)
         let moreLikeThis = exampleMovies
         
+        let previewImageName = ["dark-preview", "ozark-preview", "travelers-preview", ""].randomElement() ?? ""
+        var previewVideoUrl: URL?
+        
+        if !previewImageName.isEmpty {
+            previewVideoUrl = exampleVideoURL
+        }
+        
         let movie = Movie(id: id,
                           name: name,
                           thumbnailUrl: thumbnail,
@@ -61,7 +68,9 @@ func generateMovies(count: Int) -> [Movie] {
                           episodes: allEpisodes,
                           promotionHeadline: headline,
                           moreLikeThis: moreLikeThis,
-                          trailers: allTrailers)
+                          trailers: allTrailers, 
+                          previewImageName: previewImageName,
+                          previewVideoUrl: previewVideoUrl)
         
         allMovies.append(movie)
     }
