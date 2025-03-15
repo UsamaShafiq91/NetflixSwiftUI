@@ -2,15 +2,6 @@
 
 A SwiftUI-based application that emulates Netflix's core functionalities, providing users with an intuitive interface to browse and view details of various movies and TV shows.
 
-## Table of Contents
-
-- [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 
 - **Content Discovery:** Browse a vast collection of movies and TV shows.
